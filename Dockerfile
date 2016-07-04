@@ -8,7 +8,7 @@
 # TO_RUN           : docker run --rm -it fgribreau/maintainers-convention
 ##
 
-FROM iadvize/nodejs:6
+FROM node:6-slim
 MAINTAINER François-Guillaume Ribreau <docker@fgribreau.com>
 
 COPY . /app
