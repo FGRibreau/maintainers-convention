@@ -1,12 +1,14 @@
 machine:
   services:
     - docker
+  # Build image, this must not be changed
+  environment:
+    image: fgribreau/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH
 dependencies:
   cache_directories:
     - "~/docker"
   # Build docker image
   override:
-    - export image="$DOCKER_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH"
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
     - echo $image
