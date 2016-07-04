@@ -3,8 +3,28 @@
   "version": "1.0.0",
   "description": "Ensure a MAINTAINERS file exist inside every repository of a Github Organisation",
   "scripts": {
-    "start": "node guard-run.js"
+    "start": "node guard-run.js",
+    "changelog-init": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s",
+    "changelog-git": "npm run changelog && git add CHANGELOG.md && git commit -m 'docs(changelog): updated' && git push origin master",
+    "release-patch": "npm-release patch && npm run changelog-git",
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FGRibreau/maintainers-convention.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FGRibreau/maintainers-convention/issues"
+  },
+  "homepage": "https://github.com/FGRibreau/maintainers-convention",
+  "keywords": [
+    "github",
+    "organisation",
+    "maintainers",
+    "convention"
+  ],
   "engines": {
     "node": 6
   },
@@ -18,5 +38,10 @@
     "lodash": "^4.13.1",
     "requestretry": "^1.9.0",
     "when": "^3.7.7"
+  },
+  "devDependencies": {
+    "conventional-changelog": "^1.1.0",
+    "publish-please": "^2.1.1",
+    "npm-release": "^1.0.0"
   }
 }
