@@ -1,0 +1,23 @@
+{
+  "name": "maintainers-convention",
+  "version": "1.0.0",
+  "description": "Ensure that each repositories from a Github Org/User have a MAINTAINERS.md file",
+  "scripts": {
+    "start": "node guard-run.js",
+    "test": "mocha guard.test.js"
+  },
+  "engines": {
+    "node": 6
+  },
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.0-rc.6",
+    "base64util": "^1.0.2",
+    "common-env": "^5.2.1",
+    "debug": "^2.2.0",
+    "lodash": "^4.13.1",
+    "requestretry": "^1.9.0",
+    "when": "^3.7.7"
+  }
+}
