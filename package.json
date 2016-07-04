@@ -1,10 +1,9 @@
 {
   "name": "maintainers-convention",
   "version": "1.0.0",
-  "description": "Ensure that each repositories from a Github Org/User have a MAINTAINERS.md file",
+  "description": "Ensure a MAINTAINERS file exist inside every repository of a Github Organisation",
   "scripts": {
-    "start": "node guard-run.js",
-    "test": "mocha guard.test.js"
+    "start": "node guard-run.js"
   },
   "engines": {
     "node": 6
