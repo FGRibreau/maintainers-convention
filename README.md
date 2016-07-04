@@ -1,4 +1,4 @@
-### maintainers-convention - :guardsman: Ensure a MAINTAINERS file exist inside every repository of a Github Organisation
+### :guardsman: Ensure a MAINTAINERS file exist inside every repository of a Github Org.
 
 [![Circle CI](https://img.shields.io/circleci/project/FGRibreau/maintainers-convention/master.svg?style=flat)](https://circleci.com/gh/FGRibreau/maintainers-convention/tree/master) ![deps](https://img.shields.io/david/fgribreau/maintainers-convention.svg?style=flat) ![Version](https://img.shields.io/npm/v/maintainers-convention.svg?style=flat) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg?style=flat) [![Twitter Follow](https://img.shields.io/twitter/follow/fgribreau.svg?style=flat)](https://twitter.com/FGRibreau)
 
