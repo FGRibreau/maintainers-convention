@@ -11,6 +11,7 @@ dependencies:
   override:
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
+    - echo $image
     - docker build -t $image .
     - mkdir -p ~/docker; docker save $image > ~/docker/image.tar
 # We deploy every branch to the docker hub
