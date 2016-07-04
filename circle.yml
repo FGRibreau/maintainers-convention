@@ -3,7 +3,7 @@ machine:
     - docker
   # Build image, this must not be changed
   environment:
-    image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH
+    image: $DOCKER_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH
 dependencies:
   cache_directories:
     - "~/docker"
