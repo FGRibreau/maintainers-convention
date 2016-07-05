@@ -17,10 +17,10 @@ require('./src/guard')(config).done(repositoriesWithMaintainers => {
   });
 
   if (repositoriesWithoutMaintainerFile.length === 0) {
-    return console.error('✔ good work guys :)');
+    return console.info('✔ good work guys :)');
   }
 
-  process.stdout.write(`
+  process.stderr.write(`
 ✘ invalid repositories without "${config.maintainers.filename}" file found:
 
 ${repositoriesWithoutMaintainerFile.map((repo) => repo.repository.html_url).join('\n')}
