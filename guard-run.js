@@ -26,7 +26,7 @@ require('./src/guard')(config).done(repositoriesWithMaintainers => {
 ${repositoriesWithoutMaintainerFile.map((repo) => repo.repository.html_url).join('\n')}
 
 --- Please add a missing "${config.maintainers.filename}" files ---
-` , process.exit.bind(process, repositoriesWithoutMaintainerFile.length));
+` , process.exit.bind(process, repositoriesWithoutMaintainerFile.length || 1));
 }, err => {
   console.error('Error', err);
   process.exit(10);
