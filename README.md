@@ -11,7 +11,9 @@
 Run the guard tool daily in your favorite job runner (e.g. Jenkins or Rundeck) with:
 
 ```
-docker run --rm -it -e GITHUB_TOKEN=YOUR_GITHUB_TOKEN -e GITHUB_ORGANISATION=YOUR_GITHUB_ORG_NAME fgribreau/maintainers-convention
+docker run --rm -it \
+  -e GITHUB_TOKEN=YOUR_GITHUB_TOKEN \
+  -e GITHUB_ORGANISATION=YOUR_GITHUB_ORG_NAME fgribreau/maintainers-convention
 ```
 
 ### Todo:
