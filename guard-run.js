@@ -1,6 +1,6 @@
 'use strict';
 const _ = require('lodash');
-const config = require('common-env/withLogger')(console).getOrElseAll({
+const config = require('common-env')(console).getOrElseAll({
   github: {
     organisation: 'fgribreau',
     token: 'token'
@@ -11,7 +11,7 @@ const config = require('common-env/withLogger')(console).getOrElseAll({
 });
 
 require('./src/guard')(config).done(repositoriesWithMaintainers => {
-  
+
   const repositoriesWithoutMaintainerFile = _.filter(repositoriesWithMaintainers, {
     maintainers: null
   });

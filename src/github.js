@@ -7,6 +7,7 @@ module.exports = (method, url, qs, f) => {
     url: url,
     json: true,
     qs: qs,
+    timeout:2000,
     headers: {
       'accept': 'application/vnd.github.v3+json',
       'user-agent': 'maintainers convention checker'
