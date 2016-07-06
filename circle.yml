@@ -17,7 +17,7 @@ dependencies:
 # We deploy every branch to the docker hub
 test:
   override:
-    - docker run -t $IMAGE npm test
+    - docker run -t $image npm test
 deployment:
   production:
     branch: /.*/
