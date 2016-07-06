@@ -4,6 +4,7 @@
   "description": "Ensure a MAINTAINERS file exist inside every repository of a Github Organisation",
   "scripts": {
     "start": "node guard-run.js",
+    "test": "echo 'yolo !!'",
     "changelog-init": "conventional-changelog -i CHANGELOG.md -s -r 0",
     "changelog": "conventional-changelog -i CHANGELOG.md -s",
     "changelog-git": "npm run changelog && git add CHANGELOG.md && git commit -m 'docs(changelog): updated' && git push origin master",

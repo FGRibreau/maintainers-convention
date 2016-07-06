@@ -15,6 +15,9 @@ dependencies:
     - docker build -t $image .
     - mkdir -p ~/docker; docker save $image > ~/docker/image.tar
 # We deploy every branch to the docker hub
+test:
+  override:
+    - docker run -t $IMAGE npm test
 deployment:
   production:
     branch: /.*/
