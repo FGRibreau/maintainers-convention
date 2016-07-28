@@ -17,8 +17,9 @@ module.exports = function(config) {
   assert(_.isString(config.github.organisation));
   assert(_.isString(config.github.token));
   assert(_.isString(config.maintainers.filename));
+  assert(_.isString(config.repos.type));
 
-  const repositories = getRepos(config.github.organisation, config.github.token);
+  const repositories = getRepos(config.github.organisation, config.github.token, config.repos.type);
   // const repositories = when(JSON.parse(require('fs').readFileSync(require('path').resolve(__dirname, '../repositories.json'), 'utf8')));
 
 
