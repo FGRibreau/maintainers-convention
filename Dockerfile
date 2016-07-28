@@ -8,13 +8,6 @@
 # TO_RUN           : docker run --rm -it fgribreau/maintainers-convention
 ##
 
-FROM node:6-slim
+FROM node:6-onbuild
+
 MAINTAINER François-Guillaume Ribreau <docker@fgribreau.com>
-
-COPY . /app
-
-WORKDIR /app
-
-RUN npm install
-
-CMD ["npm", "start"]
