@@ -7,6 +7,9 @@ const config = require('common-env')(console).getOrElseAll({
   },
   maintainers: {
     filename: 'MAINTAINERS'
+  },
+  repos: {
+    type: 'all'
   }
 });
 

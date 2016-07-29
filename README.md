@@ -8,13 +8,22 @@
 
 #### Usage
 
-Run the guard tool daily in your favorite job runner (e.g. Jenkins or Rundeck) with:
+Run the guard tool daily in your favorite job runner (e.g. [Jenkins](https://jenkins.io/) or [Rundeck](http://rundeck.org/)) with:
 
 ```
 docker run --rm -it \
   -e GITHUB_TOKEN=YOUR_GITHUB_TOKEN \
   -e GITHUB_ORGANISATION=YOUR_GITHUB_ORG_NAME fgribreau/maintainers-convention
+  -e REPOS_TYPE=all
 ```
+
+##### About `REPOS_TYPE`
+
+*Note: `REPOS_TYPE` is optional (default: "all").*
+
+Possible values: `all, public, private, forks, sources, member`.
+
+[Github API Docs](https://developer.github.com/v3/repos/#list-organization-repositories)
 
 ### Todo:
 

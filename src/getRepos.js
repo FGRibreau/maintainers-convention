@@ -5,7 +5,7 @@ const _ = require('lodash');
 const when = require('when');
 
 // String -> String -> Promise[Err, Array[Repository]]
-function getRepos(organisation, token) {
+function getRepos(organisation, token, type) {
   return when.promise((resolve, reject) => {
     async.foldUntil({
       repositories: [],
@@ -13,7 +13,7 @@ function getRepos(organisation, token) {
     }, function iterator(memo, next, stop) {
       github('get', memo.url, {
         access_token: token,
-        type: 'all',
+        type: type,
         per_page: 100
       }, function(err, resp, repositories) {
         if (err) {
